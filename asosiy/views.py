@@ -45,3 +45,11 @@ class HomeView(View):
             "maqolalar": Maqola.objects.all()
         }
         return render(request, "home.html", content)
+
+
+class MaqolaView(View):
+    def get(self, request, pk):
+        content = {
+            "maqola": Maqola.objects.get(id=pk)
+        }
+        return render(request, "maqola.html", content)

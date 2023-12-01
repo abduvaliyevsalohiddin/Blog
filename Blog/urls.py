@@ -8,5 +8,6 @@ urlpatterns = [
     path('home/', HomeView.as_view()),
     path('register/', RegisterView.as_view()),
     path('logout/', LogoutView.as_view()),
+    path('maqola/<int:pk>/', MaqolaView.as_view()),
 
 ]

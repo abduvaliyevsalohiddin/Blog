@@ -8,8 +8,9 @@
  <h1> Hamma Maqolalar </h1>
 
 {% for maqola  in maqolalar %}
+ <a href="/maqola/{{ maqola.id }}/">
  {{ maqola.sarlavha }}
-
+</a>
 {% endfor %}
 </body>
 </html>
