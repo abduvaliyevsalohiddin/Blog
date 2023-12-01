@@ -41,4 +41,7 @@ class LogoutView(View):
 
 class HomeView(View):
     def get(self, request):
-        return render(request, "home.html")
+        content = {
+            "maqolalar": Maqola.objects.all()
+        }
+        return render(request, "home.html", content)

@@ -8,6 +8,9 @@ class Muallif(models.Model):
     kasbi = models.CharField(max_length=50, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return f"{self.ism}"
+
 
 class Maqola(models.Model):
     sarlavha = models.CharField(max_length=50)
@@ -15,3 +18,6 @@ class Maqola(models.Model):
     mavzu = models.CharField(max_length=50, blank=True)
     matn = models.TextField()
     muallif = models.ForeignKey(Muallif, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return f"{self.sarlavha}"
