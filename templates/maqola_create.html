@@ -5,6 +5,36 @@
     <title>Title</title>
 </head>
 <body>
+<form method="post">{% csrf_token %}
+    <div class="form-group">
+        <input name="sarlavaha" class="form-control" placeholder="Sarlavha" type="text">
+    </div>
+    <br>
+    <div class="form-group">
+        <input name="sana" class="form-control" placeholder="sana" type="date">
+    </div>
+    <br>
+    <div class="form-group">
+        <input name="mavzu" class="form-control" placeholder="Mavzu" type="text">
+    </div>
+    <br>
+    <div class="form-group">
+        <input name="matn" class="form-control" placeholder="Matn" type="text">
+    </div>
+    <div class="form-group">
+        <input name="muallif" class="form-control" placeholder="Muallif" type="text">
+    </div>
 
+
+    <br>
+    <br>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Create Maqola</button>
+    </div> <!-- form-group// -->
+    <br>
+    <br>
+
+</form>
 </body>
 </html>

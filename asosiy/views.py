@@ -53,3 +53,19 @@ class MaqolaView(View):
             "maqola": Maqola.objects.get(id=pk)
         }
         return render(request, "maqola.html", content)
+
+
+class MaqolaCreateView(View):
+    def get(self, request):
+        return render(request, "maqola_create.html")
+
+    def post(self, request):
+        if request.user.is_authenticated:
+            Maqola.objects.create(
+                sarlavha=request.POST.get("sarlavha"),
+                sana=request.POST.get("sana"),
+                mavzu=request.POST.get("mavzu"),
+                matn=request.POST.get("matn"),
+                muallif=request.POST.get("muallif"),
+            )
+            return redirect("/home/")

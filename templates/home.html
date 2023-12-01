@@ -5,12 +5,22 @@
     <title>Title</title>
 </head>
 <body>
- <h1> Hamma Maqolalar </h1>
 
-{% for maqola  in maqolalar %}
- <a href="/maqola/{{ maqola.id }}/">
- {{ maqola.sarlavha }}
+<a href="/maqola_create/">
+    <button> Maqola qo'shish</button>
+</a>
+<br>
+<br>
+<br>
+<br>
+<h1> Hamma Maqolalar </h1>
+
+{% for maqola in maqolalar %}
+<a href="/maqola/{{ maqola.id }}/">
+    {{ maqola.sarlavha }}
 </a>
 {% endfor %}
+
+
 </body>
 </html>
